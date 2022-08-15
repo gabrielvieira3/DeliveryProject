@@ -1,9 +1,9 @@
 package com.example.delivery.resources.exceptions;
 
-import com.devsuperior.dslearnbds.services.exceptions.DatabaseException;
-import com.devsuperior.dslearnbds.services.exceptions.ForbiddenException;
-import com.devsuperior.dslearnbds.services.exceptions.ResourceNotFoundException;
-import com.devsuperior.dslearnbds.services.exceptions.UnauthorizedException;
+import com.example.delivery.service.exceptions.DatabaseException;
+import com.example.delivery.service.exceptions.ForbiddenException;
+import com.example.delivery.service.exceptions.ResourceNotFoundException;
+import com.example.delivery.service.exceptions.UnauthorizedException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
