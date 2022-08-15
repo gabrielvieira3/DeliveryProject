@@ -6,6 +6,7 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "tb_role")
+//Importante destacar a presença da Annotation @Getter @Setter @NoAllConstructor @AllArgsConstructor do Lombok!!!
 public class Role implements Serializable {
     private static final long serialVersionUID = 1L;
 

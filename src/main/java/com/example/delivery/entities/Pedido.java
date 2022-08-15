@@ -6,10 +6,11 @@ import com.example.delivery.entities.enums.PedidoStatus;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.Instant;
-import java.util.Objects;
+import java.util.*;
 
 @Entity
 @Table(name = "tb_pedido")
+//Importante destacar a presença da Annotation @Getter @Setter @NoAllConstructor @AllArgsConstructor do Lombok!!!
 public class Pedido implements Serializable {
     private static final long serialVersionUID = 1L;
 
@@ -28,6 +29,9 @@ public class Pedido implements Serializable {
     @ManyToOne
     @JoinColumn(name="user_id")
     private User user;
+
+    @OneToMany(mappedBy = "pedido")
+    private List<Entrega> entregas = new ArrayList<>();
 
     public Pedido(){
     }
@@ -96,6 +100,14 @@ public class Pedido implements Serializable {
 
     public void setUser(User user) {
         this.user = user;
+    }
+
+    public List<Entrega> getEntregas() {
+        return entregas;
+    }
+
+    public void setEntregas(List<Entrega> entregas) {
+        this.entregas = entregas;
     }
 
     @Override
