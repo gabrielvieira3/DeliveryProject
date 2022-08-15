@@ -1,6 +1,6 @@
 package com.example.delivery.resources.exceptions;
 
-import org.codehaus.jackson.annotate.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.io.Serializable;
 
