@@ -71,7 +71,7 @@ public class PedidoService {
 
     private void copyDtoToEntity(PedidoDTO dto, Pedido entity) {
 
-        entity.setUri(dto.getUri());
+        entity.setName(dto.getName());
         entity.setMoment(dto.getMoment());
         entity.setCorrectCount(dto.getCorrectCount());
         entity.setFeedback(dto.getFeedback());

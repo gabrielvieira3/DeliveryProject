@@ -17,7 +17,7 @@ public class Pedido implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String uri;
+    private String name;
 
     @Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
     private Instant moment;
@@ -36,9 +36,9 @@ public class Pedido implements Serializable {
     public Pedido(){
     }
 
-    public Pedido(Long id, String uri, Instant moment, PedidoStatus status, String feedback, Integer correctCount, User user) {
+    public Pedido(Long id, String name, Instant moment, PedidoStatus status, String feedback, Integer correctCount, User user) {
         this.id = id;
-        this.uri = uri;
+        this.name = name;
         this.moment = moment;
         this.status = status;
         this.feedback = feedback;
@@ -54,12 +54,12 @@ public class Pedido implements Serializable {
         this.id = id;
     }
 
-    public String getUri() {
-        return uri;
+    public String getName() {
+        return name;
     }
 
-    public void setUri(String uri) {
-        this.uri = uri;
+    public void setName(String uri) {
+        this.name = uri;
     }
 
     public Instant getMoment() {

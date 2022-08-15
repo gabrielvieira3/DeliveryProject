@@ -10,7 +10,7 @@ import java.util.Objects;
 public class PedidoDTO {
 
     private Long id;
-    private String uri;
+    private String name;
 
     private Instant moment;
 
@@ -21,9 +21,9 @@ public class PedidoDTO {
     public PedidoDTO(){
     }
 
-    public PedidoDTO(Long id, String uri, Instant moment, PedidoStatus status, String feedback, Integer correctCount) {
+    public PedidoDTO(Long id, String name, Instant moment, PedidoStatus status, String feedback, Integer correctCount) {
         this.id = id;
-        this.uri = uri;
+        this.name = name;
         this.moment = moment;
         this.status = status;
         this.feedback = feedback;
@@ -33,7 +33,7 @@ public class PedidoDTO {
 
     public PedidoDTO(Pedido entity) {
         id = entity.getId();
-        uri = entity.getUri();
+        name = entity.getName();
         moment = entity.getMoment();
         status = entity.getStatus();
         feedback = entity.getFeedback();
@@ -48,12 +48,12 @@ public class PedidoDTO {
         this.id = id;
     }
 
-    public String getUri() {
-        return uri;
+    public String getName() {
+        return name;
     }
 
-    public void setUri(String uri) {
-        this.uri = uri;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Instant getMoment() {
