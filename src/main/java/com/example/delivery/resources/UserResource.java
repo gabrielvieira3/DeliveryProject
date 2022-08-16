@@ -33,7 +33,7 @@ public class UserResource {
     }
 
     @GetMapping(value = "/profile")
-    @ApiOperation(value = "Retorna o usuário logado")
+    @ApiOperation(value = "Retorna o usuário")
     public ResponseEntity<UserDTO> findByUser(){
         UserDTO userDTO = service.getUserAuth();
         return ResponseEntity.ok(userDTO);
